@@ -43,3 +43,6 @@ For this portfolio deployment, the application is built as a unified Streamlit m
 ## Tech Stack
 * **Modeling & Interpretation:** Python, LightGBM, SHAP, Scikit-Learn
 * **Dashboard Front-End:** Streamlit, Matplotlib, Data-Driven Containers
+
+## App Demonstration
+Access the app through this link: [credit-default-prediction-app.streamlit.app](https://credit-default-prediction-app.streamlit.app/)
