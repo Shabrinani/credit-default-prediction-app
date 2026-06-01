@@ -41,17 +41,16 @@ with st.sidebar:
         Bank Risk Controls
     </h3>
     """, unsafe_allow_html=True)
-    st.markdown("Adjust the bank's risk appetite. Higher thresholds mean the bank is more strict and approves fewer loans.")
     
     custom_threshold = st.slider(
         "Decision Threshold", 
         min_value=0.10, 
         max_value=0.90, 
         value=0.50, 
-        step=0.05
+        step=0.05,
+        help="Adjust the bank's risk appetite. Higher thresholds mean the bank is more strict and approves fewer loans."
     )
     st.info(f"Current Policy: Reject any application with > {custom_threshold*100:.0f}% default probability.")
-
 # ==========================================
 # MAIN DASHBOARD LAYOUT (LEFT & RIGHT PANELS)
 # ==========================================
@@ -138,10 +137,10 @@ with right_panel:
             # ==========================================
             st.divider()
             with st.expander("View Model Decision Logic (SHAP)"):
-                st.write("This waterfall chart explains the exact math behind this specific applicant's score. **Red bars** push the risk higher, **Blue bars** pull the risk lower.")
+                # Removing the custom icon parameter lets Streamlit use its official native icon
+                st.info("**How to read this chart:** Red bars push the client's risk higher, while Blue bars pull their risk lower.")
                 
                 explainer = shap.TreeExplainer(model)
-                
                 shap_explanation = explainer(input_df)
                 
                 if len(shap_explanation.shape) == 3:
