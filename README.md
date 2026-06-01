@@ -46,3 +46,8 @@ For this portfolio deployment, the application is built as a unified Streamlit m
 
 ## App Demonstration
 Access the app through this link: [credit-default-prediction-app.streamlit.app](https://credit-default-prediction-app.streamlit.app/)
+
+https://github.com/user-attachments/assets/99e22dc9-be48-4713-9960-36453a146818
+
+
+
