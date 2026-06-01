@@ -17,7 +17,7 @@ The core engine is a highly tuned **LightGBM** classifier. A major focus of this
 ## Key Business Insights
 Beyond predictive accuracy, the model and SHAP explainability revealed several critical financial behaviors that can directly inform the bank's risk strategy:
 
-![SHAP Summary Plot](asset/SHAP_summary.png)
+![SHAP Summary Plot](asset/SHAP_summary_result.png)
 
 * The model identified a strong inverse relationship between `AMT_GOODS_PRICE` and `AMT_CREDIT`. Applicants requesting high loan amounts with very little down payment on the underlying asset presented significantly higher default rates. 
 * Internal demographic data (like age and self-reported income) was vastly overpowered by external credit bureau scores (`EXT_SOURCE_1, 2, 3`). This proves that historical repayment behavior across the broader market is a much safer indicator of risk than current income levels.
